@@ -44,11 +44,8 @@ Find the Median
 
 mylist <- c(14,5,3,22,-8,9,-3,45,12,43,8,6)
 mean(mylist)
-## [1] 13
 mean(mylist,trim = 2)
-## [1] 8.5
 median(mylist)
-## [1] 8.5
 Find the mode(s) for the following
 values ( 3,4,3,5,3,6,7,2,1,2,6,7,8,6)
 Run this in the R Studio using R MarkDown and attach your output as a .HTML file in canvas.
