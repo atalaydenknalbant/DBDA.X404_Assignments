@@ -1,0 +1,53 @@
+# 1.Write a R program to get the first 10 Fibonacci numbers.
+
+
+```{r}
+fib_func <- function(){
+  fib <- 0:9
+  for (i in 3:10) {fib[i] <- fib[i - 2] + fib[i - 1]}
+  return(fib)
+}
+fib_func()
+```
+
+
+
+# 2.Read a .CSV File and assign the values to a data frame.
+
+# Select a particular row/column and change the value to NA.
+
+# Using the IMPUTE function, replace the value of the row with mean. 
+
+```{r}
+library(e1071)
+df <- read.csv("addresses.csv",header = FALSE)
+head(df)
+df$V6[4] = NA
+head(df)
+df[6] <- impute(df[6],what= c("mean"))
+head(df)
+```
+
+ 
+
+# 3.Write a R program to create three vectors a,b,c with 3 integers. 
+# Combine the three vectors to become a 3×3 matrix where each  column represents a vector. Print the content of the matrix.
+
+```{r}
+matrix_func <- function(){
+  x <- c(1,2,3) 
+  y <- c(4,5,6) 
+  z <- c(7,8,9) 
+  return(cbind(x,y,z))}
+
+matrix_func()
+```
+ 
+
+# 4.  Write a R program to create a vector which contains 10 random integer values between -50 and +50.
+
+```{r}
+vector_func <- function() {sample(-50:50, 10, replace=TRUE)}
+vector_func()
+```
+
